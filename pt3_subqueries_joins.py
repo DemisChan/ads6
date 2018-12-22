@@ -30,7 +30,7 @@ def inspection_scores_in_94103():
 
 def risk_categories_in_94103():
     """
-    Now lets get more serious, and look at how many times restaurants with postal code 94103 
+    Now lets get more serious, and look at how many times restaurants with postal code 94103
     (that's Market street) has committed health violations and group them based on their risk category.
     The output should be (risk_category, count as frequency) and sorted in descending order by frequency
     :return: a string representing the SQL query
