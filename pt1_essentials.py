@@ -15,7 +15,7 @@ def unique_business_names_count():
     """
     Write a SQL query that finds out how many unique business names are registered
     with San Francisco Food health investigation organization
-    and name the column as unique restaurant name count.
+    and name the column as "unique restaurant name count".
     :return: a string representing the SQL query
     :rtype: str
     """
