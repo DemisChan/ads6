@@ -10,7 +10,7 @@ def business_ids_count():
     
     N_o = 'SELECT COUNT(business_id) FROM businesses'
 
-    return str(N_o.iloc[0, 0])
+    return N_o
 
 
 def unique_business_names_count():
