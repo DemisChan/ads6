@@ -34,7 +34,7 @@ def first_and_last_investigation():
     :rtype: str
     """
     
-    N_o = 'SELECT MIN(application_date), MAX(application_date) FROM businesses'
+    N_o = 'SELECT MIN(RTRIM(LTRIM(REPLACE(application_date, '-', '')))), MAX(RTRIM(LTRIM(REPLACE(application_date, '-', '')))) FROM businesses'
 
     return N_o
 
