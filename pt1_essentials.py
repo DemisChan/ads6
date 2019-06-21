@@ -7,8 +7,10 @@ def business_ids_count():
     :return: a string representing the SQL query
     :rtype: str
     """
+    
+    N_o = 'SELECT COUNT(business_id) FROM businesses'
 
-    raise NotImplementedError
+    return str(N_o.iloc[0, 0])
 
 
 def unique_business_names_count():
