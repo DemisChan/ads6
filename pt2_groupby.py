@@ -32,9 +32,7 @@ def frequency_of_inspections_types():
     :rtype: str
     """
 
-    return 'SELECT type,  COUNT(*) AS count FROM inspections \
-    GROUP BY type \
-    ORDER BY count DESC'
+    return 'SELECT type,  COUNT(*) AS count FROM inspections GROUP BY type ORDER BY count DESC'
 
 
 def avg_score_by_inspection_type():
@@ -48,9 +46,7 @@ def avg_score_by_inspection_type():
     :rtype: str
     """
 
-    return 'SELECT type, ROUND(AVG(Score), 1) AS average_score FROM inspections \
-    WHERE Score IS NOT NULL \
-    GROUP BY type'
+    return 'SELECT type, ROUND(AVG(Score), 1) AS average_score FROM inspections WHERE Score IS NOT NULL GROUP BY type'
 
 
 def owner_per_restaurant_count():
@@ -62,7 +58,4 @@ def owner_per_restaurant_count():
     :rtype: str
     """
 
-    return 'SELECT owner_name, COUNT(business_id) Num FROM businesses \
-    GROUP BY owner_name \
-    ORDER BY Num DESC \
-    LIMIT 10'
+    return 'SELECT owner_name, COUNT(business_id) Num FROM businesses GROUP BY owner_name ORDER BY Num DESC LIMIT 10'
