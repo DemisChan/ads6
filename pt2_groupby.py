@@ -46,7 +46,7 @@ def avg_score_by_inspection_type():
     :rtype: str
     """
 
-    return 'SELECT type, ROUND(AVG(Score), 1) AS average_score FROM inspections WHERE Score IS NOT NULL GROUP BY type'
+    return 'SELECT type, ROUND(AVG(Score), 1) AS average_score FROM inspections WHERE Score IS NOT NULL GROUP BY type ORDER BY average_score'
 
 
 def owner_per_restaurant_count():
