@@ -32,7 +32,7 @@ def frequency_of_inspections_types():
     :rtype: str
     """
 
-    return 'SELECT type,  COUNT(*) AS count FROM inspections GROUP BY type ORDER BY count DESC'
+    return 'SELECT type,  COUNT(*) AS count FROM inspections GROUP BY type ORDER BY count'
 
 
 def avg_score_by_inspection_type():
