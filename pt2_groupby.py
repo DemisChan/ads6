@@ -20,10 +20,7 @@ def freq_risk_per_violation_water():
     :rtype: str
     """
 
-    return 'SELECT ViolationTypeID AS risk_category, COUNT(*) AS freq FROM violations \
-    WHERE description LIKE "%water%" \
-    GROUP BY ViolationTypeID \
-    ORDER BY freq DESC'
+    return 'SELECT ViolationTypeID AS risk_category, COUNT(*) AS freq FROM violations WHERE description LIKE "%water%" GROUP BY ViolationTypeID ORDER BY freq DESC'
 
 
 def frequency_of_inspections_types():
