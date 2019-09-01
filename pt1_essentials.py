@@ -8,9 +8,9 @@ def business_ids_count():
     :rtype: str
     """
 
-    N_o = 'SELECT COUNT(business_id) FROM businesses'
+    n_o = 'SELECT COUNT(business_id) FROM businesses'
 
-    return N_o
+    return n_o
 
 
 def unique_business_names_count():
@@ -21,9 +21,9 @@ def unique_business_names_count():
     :return: a string representing the SQL query
     :rtype: str
     """
-    N_o = 'SELECT COUNT(DISTINCT(name)) AS UNIQUE_RESTAURANT_NAME_COUNT FROM businesses'
+    n_o = 'SELECT COUNT(DISTINCT(name)) AS UNIQUE_RESTAURANT_NAME_COUNT FROM businesses'
 
-    return N_o
+    return n_o
 
 
 def first_and_last_investigation():
@@ -34,9 +34,9 @@ def first_and_last_investigation():
     :rtype: str
     """
 
-    N_o = 'SELECT MIN(date), MAX(date) FROM inspections'
+    n_o = 'SELECT MIN(date), MAX(date) FROM inspections'
 
-    return N_o
+    return n_o
 
 
 def business_local_owner_count():
@@ -47,9 +47,9 @@ def business_local_owner_count():
     :rtype: str
     """
 
-    N_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip)'
+    n_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip)'
 
-    return N_o
+    return n_o
 
 
 def business_local_owner_reg_count():
@@ -59,6 +59,7 @@ def business_local_owner_reg_count():
     :rtype: str
     """
 
-    N_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip) AND (business_certificate IS NOT NULL)'
+    n_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip) AND (business_certificate IS NOT NULL)'
     
-    return N_o
+    return n_o
+    
