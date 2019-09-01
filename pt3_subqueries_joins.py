@@ -38,5 +38,3 @@ def risk_categories_in_94103():
     """
 
     raise NotImplementedError
-
-
