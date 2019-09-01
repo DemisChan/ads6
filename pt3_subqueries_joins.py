@@ -12,7 +12,7 @@ def top_postcodes_for_chain_stores():
     :rtype: str
     """
 
-    raise NotImplementedError
+    raise 'SELECT postal_code, COUNT(postal_code) as count FROM businesses GROUP BY postal_code HAVING COUNT(business_id) > 5 ORDER BY count DESC LIMIT 10'
 
 
 def inspection_scores_in_94103():
