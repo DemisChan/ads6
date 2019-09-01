@@ -62,4 +62,3 @@ def business_local_owner_reg_count():
     n_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip) AND (business_certificate IS NOT NULL)'
     
     return n_o
-    
