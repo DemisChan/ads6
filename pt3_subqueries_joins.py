@@ -15,8 +15,8 @@ def top_postcodes_for_chain_stores():
     return "SELECT postal_code, COUNT(postal_code) as count FROM businesses as b WHERE b.owner_name in \
     (SELECT owner_name FROM businesses GROUP BY owner_name HAVING COUNT(business_id) >= 5) \
     GROUP BY postal_code ORDER BY count DESC LIMIT 10"
-
-
+    
+    
 def inspection_scores_in_94103():
     """
     First let's get an idea about the inspection score our competition has.
@@ -30,7 +30,7 @@ def inspection_scores_in_94103():
     return "SELECT MIN(Score) AS min_score, ROUND(AVG(Score), 1) AS avg_score, MAX(Score) AS max_score \
     FROM businesses AS b JOIN inspections AS i ON b.business_id = i.business_id WHERE postal_code == '94103'"
     
-    
+
 def risk_categories_in_94103():
     """
     Now lets get more serious, and look at how many times restaurants with postal code 94103
