@@ -25,9 +25,10 @@ def inspection_scores_in_94103():
     :rtype: str
     """
 
-    raise NotImplementedError
-
-
+    return "SELECT MIN(Score) AS min_score, ROUND(AVG(Score), 1) AS avg_score, MAX(Score) AS max_score \
+    FROM businesses AS b JOIN inspections AS i ON b.business_id = i.business_id WHERE postal_code == '94103'"
+    
+    
 def risk_categories_in_94103():
     """
     Now lets get more serious, and look at how many times restaurants with postal code 94103
