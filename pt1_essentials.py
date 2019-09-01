@@ -33,7 +33,7 @@ def first_and_last_investigation():
     :return: a string representing the SQL query
     :rtype: str
     """
-    
+
     N_o = 'SELECT MIN(date), MAX(date) FROM inspections'
 
     return N_o
@@ -58,7 +58,7 @@ def business_local_owner_reg_count():
     :return: a string representing the SQL query
     :rtype: str
     """
-    
+
     N_o = 'SELECT COUNT(*) FROM businesses WHERE (postal_code == owner_zip) AND (business_certificate IS NOT NULL)'
     
     return N_o
